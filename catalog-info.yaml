@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-service
+  name: example-service2
   description: "Este es un servicio de ejemplo para probar el catálogo de Backstage"
   annotations:
     # Puedes agregar cualquier anotación adicional que necesites aquí
