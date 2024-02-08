@@ -8,7 +8,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: tu-usuario-github  # Reemplaza 'tu-usuario-github' con tu nombre de usuario de GitHub
+  owner: sebastianacevedo91 # Reemplaza 'tu-usuario-github' con tu nombre de usuario de GitHub
   provides:
     - apiVersion: backstage.io/v1alpha1
       kind: API
