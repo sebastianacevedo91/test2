@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example-service
+  description: "Este es un servicio de ejemplo para probar el catálogo de Backstage"
+  annotations:
+    # Puedes agregar cualquier anotación adicional que necesites aquí
+spec:
+  type: service
+  lifecycle: experimental
+  owner: tu-usuario-github  # Reemplaza 'tu-usuario-github' con tu nombre de usuario de GitHub
+  provides:
+    - apiVersion: backstage.io/v1alpha1
+      kind: API
+      metadata:
+        name: example-api
+        description: "API de ejemplo para el servicio de ejemplo"
+        annotations:
+          # Puedes agregar cualquier anotación adicional que necesites aquí
+      spec:
+        type: openapi
+        lifecycle: experimental
+  dependencies:
+   - name: test
+     relations:
+       - type: consumes       
