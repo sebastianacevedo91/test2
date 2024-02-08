@@ -1,26 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-service2
-  description: "Este es un servicio de ejemplo para probar el catálogo de Backstage"
+  name: front-test
+  description: Servicio backend
+  links:
+    - url: https://test.com
+      title: Backend Prod
+      icon: dashboard
+  tags:
+    - nodejs
   annotations:
-    # Puedes agregar cualquier anotación adicional que necesites aquí
+    sonarqube.org/project-key: 'Sonar/com.insignias.backend'
 spec:
   type: service
-  lifecycle: experimental
-  owner: sebastianacevedo91 # Reemplaza 'tu-usuario-github' con tu nombre de usuario de GitHub
-  provides:
-    - apiVersion: backstage.io/v1alpha1
-      kind: API
-      metadata:
-        name: example-api
-        description: "API de ejemplo para el servicio de ejemplo"
-        annotations:
-          # Puedes agregar cualquier anotación adicional que necesites aquí
-      spec:
-        type: openapi
-        lifecycle: experimental
-  dependencies:
-   - name: example
-     relations:
-       - type: consumes       
+  lifecycle: production
+  owner: sebastianacevedo91
+  system: test
+  dependsOn:
+    - Resource:bd-postgres   
