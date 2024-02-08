@@ -21,6 +21,6 @@ spec:
         type: openapi
         lifecycle: experimental
   dependencies:
-   - name: example-service
+   - name: example
      relations:
        - type: consumes       
